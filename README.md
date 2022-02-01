@@ -11,7 +11,7 @@ The sample images and annotations are also present in sample_dataset folder.
 
 ## Approch:
 1. Taking one image which may contain the helmet.
-2. Getting the bbox of all the classes ( Helmet + head ) for that image. Here using the xml file to extract bboxes. We can replace this by the trained model in future.  
+2. Getting the bbox of all the classes ( Helmet,head ) for that image. Here using the xml file to extract bboxes. We can replace this by the trained model in future.  
 3. Considering only the bboxes which are of label 'Helmet'.
 4. Since the helmet annotation in the dataset is not just of helmet but of whole head of a person, therefore taking only the upper half portion of the face where the helmet will be present predominantly. Which inturn will help to remove the unwanted portion from the bbox.
 5. Slicing the upper half portion and finding the dominant colours of this portion. (Helmet area)
